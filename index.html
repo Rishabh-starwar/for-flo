@@ -57,7 +57,7 @@ button:hover{transform:scale(1.05)}.primary{background:#b93667;color:#fff}.soft{
 <section class="screen" id="s3"><div class="card fade">
 <h1 style="font-size:clamp(2rem,7vw,3.7rem)">My favourite picture 📸</h1>
 <img class="photo" src="favorite.jpg" alt="Our favourite picture">
-<p class="subtitle">One picture, a million feelings. ❤️</p>
+<p class="subtitle">This is my fav picture of us everything about it is just perfect ❤️</p>
 <button class="primary" onclick="next(4)">Keep going →</button>
 </div></section>
 
@@ -82,7 +82,7 @@ And yes… im still very much sirf tera cutu idiot dumbo who loves you an unreas
 <div class="card fade">
 <div class="eyebrow">A tiny test for Flo</div>
 <h1 style="font-size:clamp(2.1rem,7vw,3.7rem)">How well do you remember us? 👀</h1>
-<p class="subtitle">No pressure. But your cutu is definitely judging. 😭❤️</p>
+<p class="subtitle">No pressure. But Rishu is definitely judging. 😭❤️</p>
 <div class="quiz-wrap">
 <div class="quiz-q" id="quizQuestion"></div>
 <div class="quiz-options" id="quizOptions"></div>
@@ -118,8 +118,16 @@ function reveal(){document.getElementById('reveal').style.display='block';docume
 
 const quizData=[
  {q:"On what date did you give me your rubber band / hair tie? 🎀",opts:["20th December 2025","30th December 2025","18th March 2026","25th July 2026"],a:1},
- {q:"Where did we first meet? 🌷",opts:["At school","Outside of school","At a café","At tuition"],a:1},
- {q:"When did we start dating? ❤️",opts:["18th March 2026","30th December 2025","20th December 2025","11th August 2026"],a:2}
+ {q:"Which song is our song? 🎶",opts:["Riptide","Darkhast","Iris","Zaalima"],a:2},
+ {q:"What’s our ideal date? ❤️",opts:["Movie + food","Long drive + music","Just chilling together","Food + anything with you"],a:3},
+ {q:"What describes us best? 😭",opts:["Cute","Chaotic","Clingy","Somehow all three 😭"],a:3},
+ {q:"Who is more likely to start an argument over something tiny? 💀",opts:["Me","You","Both of us","Depends on the day 💀"],a:2},
+ {q:"What’s our relationship’s biggest strength? 🫶🏾",opts:["Communication","Trust","Love","Somehow surviving each other 😭"],a:2},
+ {q:"What do you think I love most about you? 🥹",opts:["Your smile","Your personality","The way you care","Literally everything"],a:3},
+ {q:"What’s the most “me” thing I do? 😭",opts:["Annoy you","Make you laugh","Overthink","All of these 😭"],a:3},
+ {q:"What would I choose for a date? 🍿",opts:["Fancy dinner","Movie night","Just spending time together","Food + anything with you"],a:3},
+ {q:"What do you think I miss most when we’re apart? ❤️",opts:["Your voice","Your hugs","Talking to you","Everything about you"],a:3},
+ {q:"What’s one thing I could never say no to? 👀",opts:["Food","You","Sleep","You asking nicely 😭"],a:1}
 ];
 let qi=0,score=0,answered=false;
 function renderQuiz(){
@@ -149,7 +157,7 @@ function nextQuestion(){
  else{
   document.getElementById('quizQuestion').textContent='Quiz complete 🥹';
   document.getElementById('quizOptions').innerHTML='';
-  document.getElementById('quizFeedback').textContent=score===3?'3/3. Okay Flo, I see you remember us. ❤️':'You still got through it, so I’ll allow it. 😭❤️';
+  document.getElementById('quizFeedback').textContent=score===quizData.length?score+'/'+quizData.length+'. Okay Flo, I see you remember us. ❤️':score+'/'+quizData.length+'. You still got through it, so I’ll allow it. 😭❤️';
   document.getElementById('quizNext').style.display='block';
   document.getElementById('quizNext').textContent='Okay… one last thing →';
   document.getElementById('quizNext').onclick=()=>next(6);
